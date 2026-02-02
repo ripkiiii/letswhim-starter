@@ -1,0 +1,13 @@
+{
+  "name": "letswhim-project",
+  "version": "2.9.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node lw.js dev",
+    "build": "node lw.js build"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "@hono/node-server": "^1.0.0"
+  }
+}

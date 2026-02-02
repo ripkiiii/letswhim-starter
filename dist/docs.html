@@ -1,0 +1,123 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Docs - letswhim</title>
+      <meta name="description" content="Minimalist frontend framework.">
+      <link rel="canonical" href="https://letswhim.pages.dev">
+      <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"LetsWhim","url":"https://letswhim.pages.dev"}</script>
+
+      <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://unpkg.com/lucide@latest"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+      <style>
+        :root { --bg: #1e1f20; --text: #ffffff; --border: rgba(255,255,255,0.1); --inverse-bg: #ffffff; --inverse-text: #000000; }
+        body.light-mode { --bg: #ffffff; --text: #1e1f20; --border: rgba(0,0,0,0.1); --inverse-bg: #1e1f20; --inverse-text: #ffffff; }
+        body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; transition: 0.3s; margin: 0; }
+        .glass { background: rgba(125,125,125,0.03); border: 1px solid var(--border); backdrop-filter: blur(12px); }
+        .text-huge { font-size: clamp(3rem, 8vw, 6rem); line-height: 0.95; letter-spacing: -0.04em; }
+        #toast { visibility: hidden; min-width: 250px; background: var(--inverse-bg); color: var(--inverse-text); border-radius: 99px; padding: 14px 28px; position: fixed; left: 50%; bottom: 40px; transform: translateX(-50%) translateY(20px); font-size: 14px; font-weight: 600; opacity: 0; transition: 0.4s; display: flex; align-items: center; gap: 10px; z-index: 100; }
+        #toast.show { visibility: visible; opacity: 1; transform: translateX(-50%) translateY(0); }
+        
+        /* --- LOGIC ICON MATAHARI & BULAN --- */
+        .icon-moon { display: none; } /* Default: Bulan Ngumpet */
+        body.light-mode .icon-sun { display: none; } /* Light Mode: Matahari Ngumpet */
+        body.light-mode .icon-moon { display: block; } /* Light Mode: Bulan Muncul */
+      </style>
+    </head>
+    <body>
+      <main>
+  
+  <nav class="h-20 flex items-center justify-between px-6 md:px-10 sticky top-0 z-50 backdrop-blur-xl border-b bg-[var(--bg)]/80 transition-colors duration-300" style="border-color: var(--border)">
+    
+    <a href="index.html" class="flex items-center gap-3 hover:opacity-50 transition group">
+      <img src="public/favicon.svg" class="w-6 h-6 group-hover:rotate-12 transition duration-500 opacity-80" alt="Logo">
+      <span class="text-xl font-bold tracking-tighter text-[var(--text)]">
+        letswhim<span class="opacity-30">.</span>
+      </span>
+    </a>
+    
+    <div class="flex items-center gap-8">
+      <div class="hidden md:flex gap-8 text-sm font-medium opacity-60">
+        <a href="docs.html" class="hover:opacity-100 transition text-[var(--text)]">Docs</a>
+        <a href="examples.html" class="hover:opacity-100 transition text-[var(--text)]">Examples</a>
+        <a href="about.html" class="hover:opacity-100 transition text-[var(--text)]">About</a>
+        <a href="contact.html" class="hover:opacity-100 transition text-[var(--text)]">Help</a>
+      </div>
+      
+      <div class="pl-6 border-l" style="border-color: var(--border)">
+        
+  <button onclick="toggleTheme()" class="glass w-10 h-10 rounded-full flex items-center justify-center hover:bg-[var(--text)] hover:text-[var(--bg)] transition duration-300 cursor-pointer">
+    <i data-lucide="sun" class="w-5 h-5 icon-sun"></i>
+    
+    <i data-lucide="moon" class="w-5 h-5 icon-moon"></i>
+  </button>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="max-w-4xl mx-auto px-6 md:px-10 py-20 pb-40">
+    <h1 class="text-huge tracking-tightest font-bold leading-none mb-10 text-[var(--text)]">docs<span class="opacity-20">.</span></h1>
+
+    <section class="mb-20">
+      <div class="flex items-center gap-4 mb-6">
+        <span class="text-4xl font-bold opacity-10 text-[var(--text)]">00</span>
+        <h2 class="text-3xl font-bold tracking-tight text-[var(--text)]">Installation</h2>
+      </div>
+      <p class="opacity-60 mb-6 leading-relaxed text-[var(--text)]">
+        Ensure <strong class="text-[var(--text)] underline">Node.js v22</strong> is installed. Run the command below.
+      </p>
+      
+      <div class="bg-[var(--text)]/5 p-8 rounded-3xl font-mono text-sm border border-[var(--text)]/10 mb-6">
+        <span class="opacity-50"># Create new project</span><br>
+        <span class="text-[var(--text)]">npm create letswhim@latest my-app</span><br><br>
+        <span class="opacity-50"># Start server</span><br>
+        <span class="text-[var(--text)]">cd my-app && lw dev</span>
+      </div>
+    </section>
+
+    <section class="glass p-10 rounded-3xl border mb-10" style="border-color: var(--border)">
+  <h2 class="text-2xl font-bold mb-4 flex items-center gap-3 text-[var(--text)]">
+    <i data-lucide="cpu" class="w-5 h-5"></i> Core Logic
+  </h2>
+  <div class="grid gap-4">
+    <div class="p-4 bg-[var(--text)]/5 rounded-xl border border-[var(--text)]/10">
+       <code class="font-bold text-[var(--text)]">atur x = "value"</code>
+       <p class="text-xs opacity-50 mt-1">Alias untuk const/let (Variable declaration).</p>
+    </div>
+    
+    <div class="p-4 bg-[var(--text)]/5 rounded-xl border border-[var(--text)]/10">
+       <code class="font-bold text-[var(--text)]">tunggu ...</code>
+       <p class="text-xs opacity-50 mt-1">Alias untuk await (Handle asynchronous operations).</p>
+    </div>
+
+    <div class="p-4 bg-[var(--text)]/5 rounded-xl border border-[var(--text)]/10">
+       <code class="font-bold text-[var(--text)]">ambil(url)</code>
+       <p class="text-xs opacity-50 mt-1">Alias sakti untuk fetch() yang otomatis jadi JSON.</p>
+    </div>
+  </div>
+</section>
+  </div>
+</main>
+      <div id="toast"><i data-lucide="check-circle" class="w-4 h-4"></i><span id="toast-msg"></span></div>
+      <script>
+        lucide.createIcons();
+        if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-mode');
+        window.toggleTheme = () => {
+          document.body.classList.toggle('light-mode');
+          localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        }
+        window.showToast = (msg) => {
+          const t = document.getElementById("toast");
+          document.getElementById("toast-msg").innerText = msg;
+          t.className = "show";
+          setTimeout(() => { t.className = ""; }, 3000);
+        }
+      </script>
+    </body>
+    </html>
