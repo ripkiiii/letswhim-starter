@@ -1,4 +1,4 @@
-# LetsWhim v2.9 🌑
+# LetsWhim v2.9
 > "Why countdown the future 1234? Let's just start."
 
 LetsWhim adalah framework minimalist yang dirancang untuk mereka yang ingin membangun web tanpa pusing. Dibuat dengan filosofi **Aesthetics > Complexity**, LetsWhim fokus pada keindahan kode dan kemudahan penggunaan.
@@ -12,7 +12,7 @@ LetsWhim adalah framework minimalist yang dirancang untuk mereka yang ingin memb
 - **Ultra Fast**: Berjalan di atas Node.js v22 & Cloudflare Workers.
 
 ### 🛠️ Kata Sakti (L-Lang)
-L-Lang bukan bahasa baru yang rumit, ini adalah sistem panggilan sayang untuk JavaScript:
+L-Lang bukan bahasa baru yang rumit, ini adalah sistem panggilan untuk JavaScript:
 - `pajang` -> console.log
 - `ambil` -> fetch
 - `atur` -> const/let
