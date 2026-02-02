@@ -1,0 +1,11 @@
+# Abaikan file Google
+google*.html
+public/google*.html
+
+# Abaikan folder build
+dist/
+
+# Abaikan file sampah OS
+.DS_Store
+public/.DS_Store
+node_modules/
