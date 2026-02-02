@@ -1,56 +1,16 @@
-<logic>
-  atur tagline = "let's just start"
-</logic>
+---
+title: LetsWhim Starter
+---
 
-<template>
-  <whim:navbar />
+<section style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif; color: white;">
+  <h1 style="font-size: 2.5rem; font-weight: 500; letter-spacing: -1px;">LetsWhim v2.9 🌑</h1>
+  <p style="opacity: 0.5; margin-top: 10px;">Start your aesthetic journey here.</p>
   
-  <section class="min-h-[85vh] flex flex-col justify-center items-center px-6 text-center">
-    <div class="max-w-4xl animate-fade-in">
-      
-      <h1 class="text-huge font-extrabold leading-none text-[var(--text)]">
-        letswhim<span class="opacity-20">.</span>
-      </h1>
+  <div style="margin-top: 30px; padding: 15px; border: 1px solid #333; border-radius: 8px; font-size: 0.9rem;">
+    <code>Edit <b>index.letswhim</b> to begin</code>
+  </div>
+</section>
 
-      <div class="mt-10 mb-12 space-y-2">
-         <p class="text-lg md:text-xl opacity-40 font-light tracking-wide text-[var(--text)]">
-           Why countdown the future 4321?
-         </p>
-         
-         <p class="text-2xl md:text-3xl opacity-100 font-bold tracking-tight text-[var(--text)]">
-           When you can just start 1234.
-         </p>
-         
-         <p class="text-sm md:text-base opacity-50 italic pt-2 text-[var(--text)]">
-           Let's just start.
-         </p>
-      </div>
-
-      <div class="mx-auto w-fit relative group">
-        <button onclick="navigator.clipboard.writeText('npm create letswhim@latest'); window.showToast('Ready to start. Copied!')" class="glass p-2 rounded-full flex items-center gap-4 pr-6 pl-3 hover:border-[var(--text)] transition duration-300 cursor-pointer">
-          
-          <div class="bg-[var(--text)] p-3 rounded-full text-[var(--bg)]">
-             <i data-lucide="terminal" class="w-4 h-4"></i>
-          </div>
-          
-          <code class="font-mono text-base tracking-tight font-medium text-[var(--text)] pr-2">npm create letswhim@latest</code>
-
-          <div class="opacity-30 group-hover:opacity-100 transition">
-             <i data-lucide="copy" class="w-4 h-4 text-[var(--text)]"></i>
-          </div>
-        </button>
-        <p class="mt-4 text-[10px] uppercase tracking-widest opacity-20 font-bold text-[var(--text)]">v2.9 Stable Release</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-10 pb-20 max-w-7xl mx-auto">
-    <whim:box icon="zap" label="Lightning Fast" desc="Initialize projects in milliseconds." />
-    <whim:box icon="box" label="Modular Design" desc="Clean, reusable component architecture." />
-    <whim:box icon="globe" label="Edge Native" desc="Optimized for Cloudflare Workers." />
-  </section>
-  
-  <footer class="text-center py-10 opacity-20 text-sm text-[var(--text)] border-t mx-10" style="border-color: var(--border)">
-    &copy; 2026 Rifky. Powered by LetsWhim v2.9
-  </footer>
-</template>
+<script>
+  pajang("LetsWhim Starter: Ready to build! 🚀");
+</script>
