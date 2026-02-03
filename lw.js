@@ -14,6 +14,7 @@ const COMPONENTS_DIR = path.join(__dirname, 'start', 'components');
 const PUBLIC_DIR = path.join(__dirname, 'public');
 const DIST_DIR = path.join(__dirname, 'dist');
 
+// Pastikan folder dist ada
 if (!fs.existsSync(DIST_DIR)) fs.mkdirSync(DIST_DIR);
 
 function readFileSafe(filePath) {
@@ -45,7 +46,7 @@ function parseLlang(content) {
         });
     }
 
-    // 2. SSR VARIABLE INJECTION (Biar HTML ke-isi awal)
+    // 2. SSR VARIABLE INJECTION
     const ssrVariables = {};
     logicCode.split('\n').forEach(line => {
         const aturMatch = line.match(/atur\s+(\w+)\s*=\s*["'](.*?)["'];/);
@@ -57,8 +58,7 @@ function parseLlang(content) {
         templateHtml = templateHtml.replace(regex, value);
     }
 
-    // 3. ⚡ THE TRANSPILER (Logic Sakti Punya Lo!)
-    // Kita convert L-Lang jadi JavaScript valid buat Browser
+    // 3. ⚡ THE TRANSPILER
     let clientJs = logicCode
         .replace(/atur\s+(\w+)\s*=\s*/g, 'var $1 = vars.$1 = ')
         .replace(/jika\s*\((.*?)\)\s*{/g, 'if ($1) {') 
@@ -72,7 +72,6 @@ function parseLlang(content) {
         .replace(/pajang\s+(.*)/g, 'console.log($1)')
         .replace(/tulis\s+["']([^"']+)["']/g, 'vars.outputLines.push("$1")')
         .replace(/\bbersihkan\b/g, 'console.clear()')
-        // Regex Perintah (Action Button)
         .replace(/perintah\s+(["'])(.*?)\1\s*->\s*(.+)/g, 'vars.commands["$2"] = async function() { $3 };');
 
     return { html: templateHtml, script: clientJs, meta: ssrVariables };
@@ -111,18 +110,13 @@ function wrapInLayout(body, meta, clientScript) {
 <body>
     ${body}
     <script>
-        // INIT ENGINE VARS
         const vars = { commands: {}, outputLines: [] };
-
-        // USER LOGIC (Transpiled)
         (async function() {
             try {
                 ${clientScript}
             } catch (e) {
                 console.error("L-Lang Runtime Error:", e);
             }
-            
-            // BRIDGE: Map L-Lang Commands to Window (biar tombol HTML bisa baca)
             Object.keys(vars.commands).forEach(cmd => {
                 window[cmd] = vars.commands[cmd];
             });
@@ -135,6 +129,19 @@ function wrapInLayout(body, meta, clientScript) {
 // BUILD & SERVE
 function build() {
     console.log("⚙️  Starting L-Lang Engine v2.0.1 (FULL POWER)...");
+
+    // 1. Copy Public Assets ke Dist (Penting buat Cloudflare!)
+    if (fs.existsSync(PUBLIC_DIR)) {
+        fs.readdirSync(PUBLIC_DIR).forEach(file => {
+            const src = path.join(PUBLIC_DIR, file);
+            const dest = path.join(DIST_DIR, file);
+            if (fs.lstatSync(src).isFile()) {
+                fs.copyFileSync(src, dest);
+            }
+        });
+    }
+
+    // 2. Render Pages
     if (!fs.existsSync(PAGES_DIR)) return;
     const files = fs.readdirSync(PAGES_DIR).filter(f => f.endsWith('.lw'));
     files.forEach(file => {
@@ -170,5 +177,13 @@ function startServer() {
     server.listen(PORT, () => console.log(`\n🏄 SURFBOARD v2.0.1 READY!\n🚀 Local: http://localhost:${PORT}`));
 }
 
+// --- JALANKAN PROSES ---
 build();
-startServer();
+
+// CEK: Apakah sedang berjalan di Cloudflare Pages?
+if (process.env.CF_PAGES === '1') {
+    console.log("\n✅ BUILD SUCCESS! Cloudflare deployment in progress...");
+    process.exit(0); // WAJIB biar Cloudflare tau build udah beres
+} else {
+    startServer();
+}
