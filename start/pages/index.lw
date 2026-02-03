@@ -1,5 +1,6 @@
 <logic>
-  atur title = "LetsWhim | The Ultralight Web Engine";
+  atur title = "LetsWhim - The Ultralight Web Engine";
+  atur desc = "LetsWhim is a high-performance, ultralight web engine built for speed and simplicity. Create modern web experiences with the power of L-Lang Engine v2.0.1.";
 </logic>
 
 <template>
