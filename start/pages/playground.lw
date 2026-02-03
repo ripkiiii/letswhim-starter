@@ -9,8 +9,8 @@
     <div class="alert-card">
       <div class="alert-icon">🖥️</div>
       <h2>Desktop Only</h2>
-      <p>Playground LetsWhim butuh layar lebar buat ngoding dan fitur P2P Multiplayer. Pindah ke laptop atau PC ya, Ky!</p>
-      <a href="/" class="btn-back">Balik ke Home</a>
+      <p>The LetsWhim playground requires a large screen for coding and P2P Multiplayer features. Please switch to a laptop or PC.</p>
+      <a href="/" class="btn-back">Back to Home</a>
     </div>
   </div>
 

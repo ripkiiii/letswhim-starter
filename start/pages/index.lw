@@ -1,6 +1,6 @@
 <logic>
   atur title = "LetsWhim - The Ultralight Web Engine";
-  atur desc = "LetsWhim is a high-performance, ultralight web engine built for speed and simplicity. Create modern web experiences with the power of L-Lang Engine v2.0.1.";
+  atur desc = "A high-performance, zero-bloat web engine designed for the modern era. Experience instant execution with L-Lang syntax.";
 </logic>
 
 <template>
@@ -11,15 +11,16 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-text">
-            <div class="engine-badge">Engine v2.0 Live</div>
-            <h1>Empowering Logic. <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
+            <div class="engine-badge">Engine v2.0.1 • Stable</div>
+            <h1>Empowering Logic.
+            <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
             <p>
-              LetsWhim adalah engine web ultralight yang dirancang untuk performa tanpa kompromi. 
-              Eksekusi ide Anda secara instan dengan sintaks L-Lang yang manusiawi dan efisien.
+              LetsWhim is a zero-compromise web engine architected for raw performance. 
+              Deploy your ideas instantly with human-centric, high-efficiency L-Lang syntax.
             </p>
             <div class="hero-btns">
-              <a href="/playground" class="btn-primary">Mulai Eksplorasi</a>
-              <a href="/docs" class="btn-secondary">Pelajari Arsitektur</a>
+              <a href="/playground" class="btn-primary">Start Exploring</a>
+              <a href="/docs" class="btn-secondary">View Architecture</a>
             </div>
           </div>
           
@@ -33,7 +34,7 @@
               <div class="window-title">hello-world.lw</div>
             </div>
             <div class="window-content">
-              <pre><code><span class="token-keyword">atur</span> visi = <span class="token-string">"Minimalis"</span>;
+              <pre><code><span class="token-keyword">atur</span> vision = <span class="token-string">"Minimalist"</span>;
 <span class="token-keyword">pajang</span> <span class="token-string">"LetsWhim Engine Ready."</span>;
 
 <span class="token-comment">// Native Client-Side Execution</span>
@@ -49,13 +50,16 @@
         <div class="terminal-loader">
           <div class="terminal-info">
             <div class="t-dots"><span></span><span></span><span></span></div>
-            <span class="t-title">Bash — Quick Initalization</span>
+            <span class="t-title">Bash — Quick Initialization</span>
           </div>
           <div class="terminal-content">
             <span class="command-text">npm create letswhim@latest</span>
           </div>
           <button class="copy-btn" onclick="navigator.clipboard.writeText('npm create letswhim@latest')" title="Copy to clipboard">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
           </button>
         </div>
       </div>
@@ -66,24 +70,34 @@
         <div class="features-grid">
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
+              </svg>
             </div>
-            <h3>Engine Ultralight</h3>
-            <p>Runtime minimalis yang berjalan murni di sisi client, mengeliminasi latensi server secara total.</p>
+            <h3>Ultralight Core</h3>
+            <p>A minimalist runtime executing purely on the client-side, effectively eliminating server-induced latency.</p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+              </svg>
             </div>
-            <h3>P2P Multiplayer</h3>
-            <p>Kolaborasi real-time tanpa perantara database. Koneksi langsung antar browser via WebRTC.</p>
+            <h3>Native P2P Engine</h3>
+            <p>Real-time collaboration without database middleware. Direct browser-to-browser connectivity via WebRTC.</p>
           </div>
+
           <div class="feature-card">
             <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
             </div>
-            <h3>Sintaks L-Lang</h3>
-            <p>Abstraksi kode yang bersih dan intuitif, dirancang untuk mempercepat alur kerja pengembang.</p>
+            <h3>L-Lang Syntax</h3>
+            <p>Clean and intuitive code abstraction designed to accelerate developer workflows and minimize cognitive overhead.</p>
           </div>
         </div>
       </div>

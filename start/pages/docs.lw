@@ -1,5 +1,6 @@
 <logic>
-  atur title = "Documentation - LetsWhim Engine";
+  atur title = "Documentation - LetsWhim Architecture";
+  atur desc = "Master the art of ultralight web development. Explore the L-Lang syntax, P2P synchronization, and the core philosophy of LetsWhim.";
 </logic>
 
 <template>
@@ -9,107 +10,106 @@
     <aside class="docs-sidebar">
       <div class="sidebar-inner">
         <div class="nav-group">
-          <h5>Fundamental</h5>
-          <a href="#pengenalan" class="nav-link">Filosofi & Pengenalan</a>
-          <a href="#quickstart" class="nav-link">Instalasi Cepat</a>
+          <h5>Fundamentals</h5>
+          <a href="#philosophy" class="nav-link">Philosophy & Overview</a>
+          <a href="#quickstart" class="nav-link">Quick Start Guide</a>
         </div>
         <div class="nav-group">
-          <h5>Arsitektur L-Lang</h5>
-          <a href="#variabel" class="nav-link">Manajemen Variabel (atur)</a>
-          <a href="#output" class="nav-link">Sistem Output (pajang)</a>
-          <a href="#komentar" class="nav-link">Dokumentasi Kode</a>
+          <h5>L-Lang Architecture</h5>
+          <a href="#variables" class="nav-link">Variable Management (atur)</a>
+          <a href="#output" class="nav-link">Output Systems (pajang)</a>
+          <a href="#comments" class="nav-link">Code Documentation</a>
         </div>
         <div class="nav-group">
-          <h5>Fitur Lanjutan</h5>
-          <a href="#p2p-sync" class="nav-link">Multiplayer P2P Sync</a>
+          <h5>Advanced Features</h5>
+          <a href="#p2p-sync" class="nav-link">P2P Multiplayer Sync</a>
           <a href="#auto-theme" class="nav-link">Adaptive Smart UI</a>
         </div>
         <div class="nav-group">
-          <h5>Ekosistem</h5>
-          <a href="#profil-author" class="nav-link">Profil Pengembang</a>
+          <h5>Ecosystem</h5>
+          <a href="#creator-profile" class="nav-link">The Creator</a>
         </div>
       </div>
     </aside>
 
     <main class="docs-main">
-      <section id="pengenalan">
-        <h1>Filosofi & Pengenalan</h1>
+      <section id="philosophy">
+        <h1>Philosophy & Overview</h1>
         <p>
-          <strong>LetsWhim</strong> hadir sebagai antitesis dari ekosistem web modern yang semakin berat. Kami mengembangkan sebuah <em>client-side web engine</em> minimalis yang berjalan murni di browser pengguna tanpa beban kompilasi server. 
+          <strong>LetsWhim</strong> was engineered as an antithesis to the increasingly bloated modern web ecosystem. We have developed a minimalist <em>client-side web engine</em> that runs natively in the browser, eliminating the overhead of server-side compilation.
         </p>
         <p>
-          Fokus kami sederhana: memberikan kebebasan bagi developer untuk mengeksekusi logika aplikasi secara instan, aman, dan tanpa hambatan infrastruktur.
+          Our mission is clear: to empower developers with the freedom to execute application logic instantly, securely, and without infrastructure bottlenecks.
         </p>
       </section>
 
       <section id="quickstart">
-        <h1>Instalasi Cepat</h1>
+        <h1>Quick Start Guide</h1>
         <p>
-          Mulai membangun project pertama Anda dalam hitungan detik. Gunakan perintah di bawah ini melalui terminal untuk menginisialisasi ekosistem LetsWhim secara otomatis.
+          Initialize your first project in seconds. Use the following command in your terminal to automatically scaffold the LetsWhim ecosystem.
         </p>
         <div class="code-box">
           <code>npm create letswhim@latest</code>
         </div>
         <p style="margin-top: 15px; font-size: 14px;">
-          <em>*Pastikan Anda telah menginstal Node.js untuk menggunakan fitur scaffolding ini.</em>
+          <em>*Ensure you have Node.js installed to utilize this scaffolding feature.</em>
         </p>
       </section>
 
-      <section id="variabel">
-        <h1>Manajemen Variabel (atur)</h1>
+      <section id="variables">
+        <h1>Variable Management (atur)</h1>
         <p>
-          Deklarasi data di LetsWhim dirancang agar sealami mungkin. Dengan kata kunci <code>atur</code>, engine akan mengalokasikan memori secara efisien tanpa memerlukan sintaks yang kaku.
+          Data declaration in LetsWhim is designed to be as natural as possible. By using the <code>atur</code> keyword, the engine allocates memory efficiently without the need for rigid or verbose syntax.
         </p>
         <div class="code-box">
-          <code>atur versi = "2.0";</code>
+          <code>atur version = "2.0.1";</code>
         </div>
       </section>
 
       <section id="output">
-        <h1>Sistem Output (pajang)</h1>
+        <h1>Output Systems (pajang)</h1>
         <p>
-          Visualisasikan hasil pemrosesan logika Anda secara langsung ke panel Output Playground menggunakan fungsi <code>pajang</code>. Ini adalah cara tercepat untuk melakukan debugging real-time.
+          Visualize your logic processing results directly to the Playground Output panel using the <code>pajang</code> function. This is the fastest method for real-time debugging and data inspection.
         </p>
         <div class="code-box">
-          <code>pajang "Engine siap dieksekusi!";</code>
+          <code>pajang "Engine successfully executed!";</code>
         </div>
       </section>
 
-      <section id="komentar">
-        <h1>Dokumentasi Kode</h1>
+      <section id="comments">
+        <h1>Code Documentation</h1>
         <p>
-          Menjaga kode tetap bersih adalah kunci kolaborasi. Gunakan <em>double slash</em> untuk memberikan anotasi atau catatan penting pada baris logika Anda.
+          Maintaining clean code is fundamental to collaboration. Use the <em>double slash</em> syntax to provide annotations or critical notes within your logic blocks.
         </p>
         <div class="code-box">
-          <code>// Ini adalah catatan untuk logika P2P</code>
+          <code>// Implementation of P2P sync logic</code>
         </div>
       </section>
 
       <section id="p2p-sync">
-        <h1>Multiplayer P2P Sync</h1>
+        <h1>P2P Multiplayer Sync</h1>
         <p>
-          Fitur revolusioner yang memungkinkan kolaborasi multi-user murni melalui teknologi WebRTC. Tanpa database, tanpa server perantara—hanya koneksi langsung antar browser yang aman dan privat.
+          A revolutionary feature enabling pure multi-user collaboration through WebRTC technology. No databases, no intermediary servers—just secure and private browser-to-browser connectivity.
         </p>
         <p>
-          Cukup bagikan <strong>Host Token</strong> Anda kepada rekan tim untuk mulai membangun logika secara bersamaan di Playground.
+          Simply share your <strong>Host Token</strong> with your team to begin co-authoring logic in real-time within the Playground.
         </p>
       </section>
 
       <section id="auto-theme">
         <h1>Adaptive Smart UI</h1>
         <p>
-          Kenyamanan mata adalah prioritas. Engine LetsWhim secara cerdas mendeteksi preferensi tema pada sistem operasi Anda. Tidak perlu sakelar manual; antarmuka akan beradaptasi secara instan antara mode gelap dan terang.
+          Visual comfort is a priority. The LetsWhim engine intelligently detects your operating system's theme preferences. No manual toggle required; the interface adapts instantly between dark and light modes.
         </p>
       </section>
 
-      <section id="profil-author">
+      <section id="creator-profile">
         <div class="author-card">
           <img src="https://github.com/ripkiiii.png" alt="Rifky" class="author-img">
           <div class="author-info">
             <h3>Rifky</h3>
             <p>
-              Mahasiswa Digital Public Relations di <strong>Telkom University</strong>. 
-              Berdedikasi dalam menciptakan alat pengembangan web yang menggabungkan estetika desain minimalis dengan efisiensi fungsional.
+              Digital Public Relations student at <strong>Telkom University</strong> Dedicated to crafting web development tools that synthesize minimalist design aesthetics with functional efficiency.
             </p>
             <div class="author-links">
               <a href="https://github.com/ripkiiii" target="_blank" class="btn-github">
@@ -122,7 +122,6 @@
       </section>
     </main>
   </div>
-
   <Footer />
 
   <style>
