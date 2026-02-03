@@ -1,27 +1,12 @@
-# LetsWhim v2.9
-> "Why countdown the future 1234? Let's just start."
+# LetsWhim Engine v2.0
+The Ultralight Web Engine for Modern Developers.
 
-LetsWhim adalah framework minimalist yang dirancang untuk mereka yang ingin membangun web tanpa pusing. Dibuat dengan filosofi **Aesthetics > Complexity**, LetsWhim fokus pada keindahan kode dan kemudahan penggunaan.
+## Features
+- **L-Lang Syntax**: Human-friendly coding with `atur` and `pajang`.
+- **Native P2P**: Real-time collaboration without servers.
+- **Auto-Dark Mode**: System-aware UI for eye comfort.
 
----
+## Quick Start
+`npm create letswhim@latest`
 
-### ✨ Apa yang Baru di v2.9?
-- **L-Lang Integration**: Sistem 'Alias' yang bikin koding jadi lebih manusiawi.
-- **Monochrome Engine**: Standar visual baru dengan tema gelap (#1e1f20).
-- **SEO Ready**: Otomatis generate Sitemap & Robots.txt.
-- **Ultra Fast**: Berjalan di atas Node.js v22 & Cloudflare Workers.
-
-### 🛠️ Kata Sakti (L-Lang)
-L-Lang bukan bahasa baru yang rumit, ini adalah sistem panggilan untuk JavaScript:
-- `pajang` -> console.log
-- `ambil` -> fetch
-- `atur` -> const/let
-- `tunggu` -> await
-- `bersihkan` -> clear
-
-### 🚀 Cara Mulai
-Cukup satu baris perintah untuk memulai masa depan lo:
-```bash
-npm create letswhim@latest
-
-Crafted by Rifky. letswhim - Let's just start.
+Built with passion by [Rifky](https://github.com/ripkiiii).

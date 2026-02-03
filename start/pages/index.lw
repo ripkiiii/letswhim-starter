@@ -1,0 +1,168 @@
+<logic>
+  atur title = "LetsWhim | The Ultralight Web Engine";
+</logic>
+
+<template>
+  <Navbar />
+  
+  <main class="landing-page">
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="engine-badge">Engine v2.0 Live</div>
+            <h1>Empowering Logic. <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
+            <p>
+              LetsWhim adalah engine web ultralight yang dirancang untuk performa tanpa kompromi. 
+              Eksekusi ide Anda secara instan dengan sintaks L-Lang yang manusiawi dan efisien.
+            </p>
+            <div class="hero-btns">
+              <a href="/playground" class="btn-primary">Mulai Eksplorasi</a>
+              <a href="/docs" class="btn-secondary">Pelajari Arsitektur</a>
+            </div>
+          </div>
+          
+          <div class="code-window">
+            <div class="window-header">
+              <div class="window-controls">
+                <span class="dot-red"></span>
+                <span class="dot-yellow"></span>
+                <span class="dot-green"></span>
+              </div>
+              <div class="window-title">hello-world.lw</div>
+            </div>
+            <div class="window-content">
+              <pre><code><span class="token-keyword">atur</span> visi = <span class="token-string">"Minimalis"</span>;
+<span class="token-keyword">pajang</span> <span class="token-string">"LetsWhim Engine Ready."</span>;
+
+<span class="token-comment">// Native Client-Side Execution</span>
+<span class="token-keyword">atur</span> status = <span class="token-string">"High Performance"</span>;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-section">
+      <div class="container">
+        <div class="terminal-loader">
+          <div class="terminal-info">
+            <div class="t-dots"><span></span><span></span><span></span></div>
+            <span class="t-title">Bash — Quick Initalization</span>
+          </div>
+          <div class="terminal-content">
+            <span class="command-text">npm create letswhim@latest</span>
+          </div>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText('npm create letswhim@latest')" title="Copy to clipboard">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-section">
+      <div class="container">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline></svg>
+            </div>
+            <h3>Engine Ultralight</h3>
+            <p>Runtime minimalis yang berjalan murni di sisi client, mengeliminasi latensi server secara total.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>P2P Multiplayer</h3>
+            <p>Kolaborasi real-time tanpa perantara database. Koneksi langsung antar browser via WebRTC.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Sintaks L-Lang</h3>
+            <p>Abstraksi kode yang bersih dan intuitif, dirancang untuk mempercepat alur kerja pengembang.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <style>
+    .landing-page { background: var(--bg); color: var(--text); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* HERO SECTION */
+    .hero-section { padding: 160px 0 60px; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+    .engine-badge { 
+      display: inline-block; padding: 6px 12px; background: rgba(55, 147, 255, 0.1); 
+      color: var(--accent); border-radius: 6px; font-size: 11px; font-weight: 800; 
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;
+    }
+
+    h1 { font-size: 64px; font-weight: 900; line-height: 1.1; margin: 0 0 24px; letter-spacing: -2px; }
+    .text-gradient { color: var(--accent); }
+    p { font-size: 18px; line-height: 1.6; opacity: 0.6; margin-bottom: 40px; }
+
+    .hero-btns { display: flex; gap: 16px; }
+    .btn-primary { background: var(--text); color: var(--bg); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
+    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
+    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+
+    /* INSTALL SECTION */
+    .install-section { padding: 40px 0; display: flex; justify-content: center; }
+    .terminal-loader {
+      background: #0d0d0f; border: 1px solid var(--border); border-radius: 12px;
+      width: 100%; max-width: 480px; display: flex; align-items: center;
+      justify-content: space-between; padding: 16px 24px; position: relative;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .terminal-info { display: flex; align-items: center; gap: 12px; position: absolute; top: -32px; left: 10px; }
+    .t-dots { display: flex; gap: 6px; }
+    .t-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--border); opacity: 0.5; }
+    .t-title { font-size: 10px; font-family: monospace; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px; }
+    .terminal-content { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #fff; }
+    .command-text { color: var(--accent); font-weight: 500; }
+    .copy-btn { background: transparent; border: none; color: #fff; opacity: 0.4; cursor: pointer; transition: 0.2s; padding: 8px; }
+    .copy-btn:hover { opacity: 1; color: var(--accent); }
+
+    /* CODE WINDOW */
+    .code-window { background: #0a0a0b; border-radius: 12px; border: 1px solid #222; box-shadow: 0 30px 60px rgba(0,0,0,0.3); overflow: hidden; }
+    .window-header { background: #1a1a1c; padding: 12px 16px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #222; }
+    .window-controls { display: flex; gap: 8px; }
+    .window-controls span { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-red { background: #ff5f56; } .dot-yellow { background: #ffbd2e; } .dot-green { background: #27c93f; }
+    .window-title { font-size: 12px; color: #666; font-family: monospace; }
+    .window-content { padding: 30px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6; color: #d4d4d4; }
+    .token-keyword { color: #569cd6; } .token-string { color: #ce9178; } .token-comment { color: #6a9955; }
+
+    /* FEATURES */
+    .features-section { padding: 100px 0; border-top: 1px solid var(--border); }
+    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+    .feature-card { padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; transition: 0.3s; }
+    .feature-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .feature-icon { color: var(--accent); margin-bottom: 24px; }
+    .feature-card h3 { margin: 0 0 16px; font-size: 20px; font-weight: 700; }
+    .feature-card p { font-size: 14px; opacity: 0.6; line-height: 1.6; margin: 0; }
+
+    /* MOBILE RESPONSIVE FIX */
+    @media (max-width: 968px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      .hero-btns { justify-content: center; }
+      h1 { font-size: 42px; }
+      .code-window { max-width: 500px; margin: 0 auto; }
+      .features-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .code-window { display: none; }
+      .install-section { padding: 20px 0; }
+      .terminal-loader { padding: 14px 18px; }
+      .terminal-content { font-size: 13px; }
+    }
+  </style>
+</template>

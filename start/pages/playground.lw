@@ -1,0 +1,239 @@
+<logic>
+  atur title = "Playground | LetsWhim Engine";
+</logic>
+
+<template>
+  <Navbar />
+
+  <div id="mobile-alert" class="mobile-overlay">
+    <div class="alert-card">
+      <div class="alert-icon">🖥️</div>
+      <h2>Desktop Only</h2>
+      <p>Playground LetsWhim butuh layar lebar buat ngoding dan fitur P2P Multiplayer. Pindah ke laptop atau PC ya, Ky!</p>
+      <a href="/" class="btn-back">Balik ke Home</a>
+    </div>
+  </div>
+
+  <div class="pg-container">
+    <header class="pg-toolbar">
+      <div class="pg-info">
+        <div id="status-dot" class="dot"></div>
+        <span class="engine-ver">LETSWHIM v2.0 • P2P MODE</span>
+      </div>
+      <div class="pg-btns">
+        <button id="btn-collab" class="btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          Collab
+        </button>
+        <button id="btn-run" class="btn-run">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Run Code
+        </button>
+      </div>
+    </header>
+
+    <main class="pg-editor-area">
+      <section class="editor-wrap">
+        <textarea id="code-editor" spellcheck="false">atur creator = "Rifky";
+pajang "Welcome to LetsWhim Playground!";
+pajang "Built by " + creator;</textarea>
+      </section>
+
+      <section class="console-wrap">
+        <div class="console-head">OUTPUT</div>
+        <div id="console-output" class="console-body"></div>
+      </section>
+
+      <aside id="collab-drawer" class="drawer">
+        <div class="drawer-content">
+          <h3>Multiplayer P2P</h3>
+          <p>Sync kode real-time tanpa server.</p>
+          
+          <div class="field-group">
+            <label>1. Host Token</label>
+            <button id="gen-host" class="btn-small">Generate My Token</button>
+            <textarea id="out-token" readonly placeholder="Token lo bakal muncul di sini..."></textarea>
+          </div>
+
+          <div class="field-group">
+            <label>2. Remote Token</label>
+            <textarea id="in-token" placeholder="Tempel token temen lo di sini..."></textarea>
+            <button id="connect-peer" class="btn-small btn-blue">Connect to Peer</button>
+          </div>
+          
+          <div id="p2p-log" class="p2p-status">Status: Offline</div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <style>
+    /* CSS VARIABLES & RESET */
+    body { margin: 0; background: var(--bg); color: var(--text); overflow: hidden; font-family: 'Inter', sans-serif; }
+    
+    /* MOBILE PROTECTION */
+    .mobile-overlay { 
+      display: none; position: fixed; inset: 0; background: var(--bg); 
+      z-index: 9999; align-items: center; justify-content: center; padding: 30px; 
+    }
+    .alert-card { text-align: center; max-width: 300px; }
+    .alert-icon { font-size: 50px; margin-bottom: 20px; }
+    .btn-back { display: inline-block; margin-top: 20px; color: var(--accent); text-decoration: none; font-weight: bold; }
+
+    @media (max-width: 1024px) { 
+      .mobile-overlay { display: flex; } 
+      .pg-container { display: none; }
+    }
+
+    /* PLAYGROUND LAYOUT */
+    .pg-container { height: 100vh; display: flex; flex-direction: column; }
+    .pg-toolbar { 
+      margin-top: 80px; height: 60px; padding: 0 24px; 
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border); background: var(--bg);
+    }
+
+    .pg-info { display: flex; align-items: center; gap: 10px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #444; transition: 0.3s; }
+    .engine-ver { font-size: 10px; font-weight: 800; opacity: 0.4; letter-spacing: 1px; }
+
+    .pg-btns { display: flex; gap: 12px; }
+    .btn-run { background: var(--accent); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+    .btn-outline { background: var(--surface); color: var(--text); border: 1px solid var(--border); padding: 8px 16px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 13px; }
+
+    /* WORKSPACE */
+    .pg-editor-area { flex: 1; display: flex; position: relative; overflow: hidden; }
+    
+    .editor-wrap { flex: 1.5; background: #0d0d0f; border-right: 1px solid var(--border); }
+    #code-editor { 
+      width: 100%; height: 100%; background: transparent; color: #9cdcfe; 
+      border: none; padding: 30px; font-family: 'JetBrains Mono', monospace; 
+      font-size: 14px; outline: none; resize: none; line-height: 1.6;
+    }
+
+    .console-wrap { flex: 1; background: #000; display: flex; flex-direction: column; }
+    .console-head { padding: 12px 20px; font-size: 10px; font-weight: 800; color: #444; border-bottom: 1px solid #111; }
+    .console-body { flex: 1; padding: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #3793ff; overflow-y: auto; }
+
+    /* DRAWER */
+    .drawer { 
+      position: absolute; right: -350px; top: 0; width: 350px; height: 100%; 
+      background: var(--bg); border-left: 1px solid var(--border); transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50; 
+    }
+    .drawer.active { right: 0; box-shadow: -20px 0 50px rgba(0,0,0,0.1); }
+    .drawer-content { padding: 30px; }
+    .drawer h3 { margin: 0 0 8px; font-size: 18px; }
+    .drawer p { font-size: 12px; opacity: 0.5; margin-bottom: 24px; }
+
+    .field-group { margin-bottom: 20px; }
+    .field-group label { display: block; font-size: 11px; font-weight: 700; opacity: 0.5; margin-bottom: 8px; }
+    textarea { width: 100%; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 6px; padding: 10px; font-family: monospace; font-size: 10px; resize: none; }
+    #out-token, #in-token { height: 70px; }
+
+    .btn-small { width: 100%; padding: 10px; border-radius: 6px; border: 1px solid var(--border); background: var(--surface); color: var(--text); cursor: pointer; font-weight: 700; font-size: 12px; margin: 8px 0; }
+    .btn-blue { background: var(--accent); color: white; border: none; }
+    .p2p-status { font-size: 11px; font-weight: 800; opacity: 0.3; margin-top: 10px; }
+  </style>
+
+  <script>
+    (function() {
+      let pc, dc;
+      const editor = document.getElementById('code-editor');
+      const output = document.getElementById('console-output');
+      const statusDot = document.getElementById('status-dot');
+      const p2pLog = document.getElementById('p2p-log');
+
+      window.printToLog = (v) => {
+        const line = document.createElement('div');
+        line.innerText = "> " + v;
+        output.appendChild(line);
+        output.scrollTop = output.scrollHeight;
+      };
+
+      const runEngine = () => {
+  output.innerHTML = "";
+  try {
+    const codeLines = editor.value.split('\n');
+    const compiled = codeLines.map(line => {
+      let s = line.trim();
+      if (!s) return "";
+      
+      // Fix: Regex untuk menangkap isi di dalam pajang secara akurat
+      if (s.startsWith('pajang ')) {
+        const content = s.replace(/^pajang\s+/, '').replace(/;$/, '');
+        // Kita bungkus content dengan String() biar kalau user lupa kutip gak langsung crash
+        return `window.printToLog(${content});`;
+      }
+      
+      if (s.startsWith('atur ')) {
+        return s.replace(/^atur\s+/, 'var ').replace(/;?$/, ';');
+      }
+      
+      return s;
+    }).join('\n');
+
+    // Gunakan fungsi konstruktor biar lebih aman dari scope global
+    new Function(compiled)(); 
+    
+  } catch (e) { 
+    window.printToLog("Syntax Error: " + e.message); 
+    console.error(e);
+  }
+};
+
+      // Toolbar Actions
+      document.getElementById('btn-run').onclick = () => {
+        runEngine();
+        if(dc?.readyState === "open") dc.send(JSON.stringify({type: 'run'}));
+      };
+
+      document.getElementById('btn-collab').onclick = () => {
+        document.getElementById('collab-drawer').classList.toggle('active');
+      };
+
+      // P2P Logic
+      const initDC = () => {
+        dc.onopen = () => { 
+          statusDot.style.background = "#3793ff"; 
+          p2pLog.innerText = "Status: Connected";
+        };
+        dc.onmessage = e => {
+          const msg = JSON.parse(e.data);
+          if(msg.type === 'code') editor.value = msg.val;
+          if(msg.type === 'run') runEngine();
+        };
+      };
+
+      document.getElementById('gen-host').onclick = async () => {
+        pc = new RTCPeerConnection();
+        dc = pc.createDataChannel("lets-sync");
+        initDC();
+        pc.onicecandidate = e => {
+          if(!e.candidate) document.getElementById('out-token').value = btoa(JSON.stringify(pc.localDescription));
+        };
+        await pc.setLocalDescription(await pc.createOffer());
+      };
+
+      document.getElementById('connect-peer').onclick = async () => {
+        const val = document.getElementById('in-token').value;
+        if(!val) return;
+        const offer = JSON.parse(atob(val));
+        if(!pc) {
+          pc = new RTCPeerConnection();
+          pc.ondatachannel = e => { dc = e.channel; initDC(); };
+          pc.onicecandidate = e => {
+            if(!e.candidate) document.getElementById('out-token').value = btoa(JSON.stringify(pc.localDescription));
+          };
+          await pc.setRemoteDescription(offer);
+          await pc.setLocalDescription(await pc.createAnswer());
+        } else {
+          await pc.setRemoteDescription(offer);
+        }
+      };
+
+      editor.oninput = () => {
+        if(dc?.readyState === "open") dc.send(JSON.stringify({type: 'code', val: editor.value}));
+      };
+    })();
+  </script>
+</template>

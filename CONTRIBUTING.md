@@ -1,11 +1,17 @@
-# Contributing to letswhim
+# Contributing to LetsWhim
 
-Halo! Seneng banget kalau kamu mau ikut berkontribusi. letswhim punya satu aturan utama: **Estetika > Kompleksitas.**
+Terima kasih sudah tertarik untuk berkontribusi di LetsWhim Engine!
 
-### Cara Kontribusi:
-1. **Keep it Minimalist**: Jangan nambah fitur yang bikin pusing.
-2. **L-Lang First**: Kalau nambah fungsi, pastikan ada alias L-Lang nya (pajang, ambil, atur, dll).
-3. **Clean Code**: Gunakan gaya koding yang proporsional.
-4. **No Capslock**: Kita nggak suka teriak-teriak di kodingan.
+## Cara Berkontribusi
+1. **Fork** repository ini.
+2. Buat **Branch** baru untuk fitur Anda (`git checkout -b fitur/FiturBaru`).
+3. **Commit** perubahan Anda (`git commit -m 'Menambah fitur keren'`).
+4. **Push** ke branch tersebut (`git push origin fitur/FiturBaru`).
+5. Buat **Pull Request**.
 
-Buka Pull Request aja.
+## Aturan Penulisan Kode
+- Pastikan menggunakan sintaks yang konsisten dengan L-Lang.
+- Jaga agar UI tetap minimalis dan tanpa emotikon (Gunakan SVG Icon).
+- Pastikan fitur baru tidak merusak sistem Auto-Dark Mode.
+
+Mari bangun engine web yang lebih cepat bersama-sama!
