@@ -12,8 +12,7 @@
         <div class="hero-grid">
           <div class="hero-text">
             <div class="engine-badge">Engine v2.0.1 • Stable</div>
-            <h1>Empowering Logic.
-            <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
+            <h1>Empowering Logic. <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
             <p>
               LetsWhim is a zero-compromise web engine architected for raw performance. 
               Deploy your ideas instantly with human-centric, high-efficiency L-Lang syntax.
@@ -31,7 +30,7 @@
                 <span class="dot-yellow"></span>
                 <span class="dot-green"></span>
               </div>
-              <div class="window-title">hello-world.lw</div>
+              <div class="window-title">LetsWhim.lw</div>
             </div>
             <div class="window-content">
               <pre><code><span class="token-keyword">atur</span> vision = <span class="token-string">"Minimalist"</span>;
@@ -102,6 +101,25 @@
         </div>
       </div>
     </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-content">
+            <h2>Let's Build the Future Together</h2>
+            <p>
+              Interested in collaboration, reporting a bug, or just want to say hi? 
+              Our transmission lines are always open.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a href="mailto:rifky@keemail.me" class="btn-email">
+              Reach out via Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
@@ -113,17 +131,10 @@
     /* HERO SECTION */
     .hero-section { padding: 160px 0 60px; overflow: hidden; }
     .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-
-    .engine-badge { 
-      display: inline-block; padding: 6px 12px; background: rgba(55, 147, 255, 0.1); 
-      color: var(--accent); border-radius: 6px; font-size: 11px; font-weight: 800; 
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;
-    }
-
+    .engine-badge { display: inline-block; padding: 6px 12px; background: rgba(55, 147, 255, 0.1); color: var(--accent); border-radius: 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
     h1 { font-size: 64px; font-weight: 900; line-height: 1.1; margin: 0 0 24px; letter-spacing: -2px; }
     .text-gradient { color: var(--accent); }
     p { font-size: 18px; line-height: 1.6; opacity: 0.6; margin-bottom: 40px; }
-
     .hero-btns { display: flex; gap: 16px; }
     .btn-primary { background: var(--text); color: var(--bg); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
     .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
@@ -131,12 +142,7 @@
 
     /* INSTALL SECTION */
     .install-section { padding: 40px 0; display: flex; justify-content: center; }
-    .terminal-loader {
-      background: #0d0d0f; border: 1px solid var(--border); border-radius: 12px;
-      width: 100%; max-width: 480px; display: flex; align-items: center;
-      justify-content: space-between; padding: 16px 24px; position: relative;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
+    .terminal-loader { background: #0d0d0f; border: 1px solid var(--border); border-radius: 12px; width: 100%; max-width: 480px; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
     .terminal-info { display: flex; align-items: center; gap: 12px; position: absolute; top: -32px; left: 10px; }
     .t-dots { display: flex; gap: 6px; }
     .t-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--border); opacity: 0.5; }
@@ -165,6 +171,32 @@
     .feature-card h3 { margin: 0 0 16px; font-size: 20px; font-weight: 700; }
     .feature-card p { font-size: 14px; opacity: 0.6; line-height: 1.6; margin: 0; }
 
+    /* --- FIXED CONTACT SECTION CSS --- */
+    .contact-section { padding: 100px 0; border-top: 1px solid var(--border); }
+    .contact-card { 
+      background: var(--surface); 
+      border: 1px solid var(--border); 
+      padding: 60px; 
+      border-radius: 24px; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      gap: 40px; 
+    }
+    .contact-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
+    .contact-content p { font-size: 16px; max-width: 500px; margin-bottom: 0; opacity: 0.6; }
+    .btn-email { 
+      background: var(--accent); 
+      color: #000; 
+      padding: 16px 32px; 
+      border-radius: 12px; 
+      text-decoration: none; 
+      font-weight: 700; 
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+    .btn-email:hover { transform: scale(1.05); filter: brightness(1.1); }
+
     /* MOBILE RESPONSIVE FIX */
     @media (max-width: 968px) {
       .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
@@ -172,12 +204,8 @@
       h1 { font-size: 42px; }
       .code-window { max-width: 500px; margin: 0 auto; }
       .features-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 480px) {
-      .code-window { display: none; }
-      .install-section { padding: 20px 0; }
-      .terminal-loader { padding: 14px 18px; }
-      .terminal-content { font-size: 13px; }
+      .contact-card { flex-direction: column; text-align: center; padding: 40px 24px; }
+      .contact-content p { margin: 0 auto 30px; }
     }
   </style>
 </template>
