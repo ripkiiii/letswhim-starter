@@ -1,211 +1,57 @@
 <logic>
-  atur title = "LetsWhim - The Ultralight Web Engine";
-  atur desc = "A high-performance, zero-bloat web engine designed for the modern era. Experience instant execution with L-Lang syntax.";
+  atur title = "Welcome to LetsWhim";
+  atur desc = "Start building high-performance web experiences with L-Lang syntax.";
 </logic>
 
 <template>
   <Navbar />
-  
-  <main class="landing-page">
-    <section class="hero-section">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <div class="engine-badge">Engine v2.0.1 • Stable</div>
-            <h1>Empowering Logic. <br/><span class="text-gradient">Eliminating Bloat.</span></h1>
-            <p>
-              LetsWhim is a zero-compromise web engine architected for raw performance. 
-              Deploy your ideas instantly with human-centric, high-efficiency L-Lang syntax.
-            </p>
-            <div class="hero-btns">
-              <a href="/playground" class="btn-primary">Start Exploring</a>
-              <a href="/docs" class="btn-secondary">View Architecture</a>
-            </div>
-          </div>
-          
-          <div class="code-window">
-            <div class="window-header">
-              <div class="window-controls">
-                <span class="dot-red"></span>
-                <span class="dot-yellow"></span>
-                <span class="dot-green"></span>
-              </div>
-              <div class="window-title">LetsWhim.lw</div>
-            </div>
-            <div class="window-content">
-              <pre><code><span class="token-keyword">atur</span> vision = <span class="token-string">"Minimalist"</span>;
-<span class="token-keyword">pajang</span> <span class="token-string">"LetsWhim Engine Ready."</span>;
-
-<span class="token-comment">// Native Client-Side Execution</span>
-<span class="token-keyword">atur</span> status = <span class="token-string">"High Performance"</span>;</code></pre>
-            </div>
-          </div>
+  <main class="starter-main">
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="badge-mini">ENGINE V2.0.1 STABLE</div>
+        <h1>Hello, <br/><span class="text-accent">LetsWhim</span> <br/>Developer.</h1>
+      </div>
+      
+      <div class="hero-info">
+        <p>Your project is ready. Start building high-performance web experiences with L-Lang syntax.</p>
+        <div class="step-box">
+          <h3>Next Step:</h3>
+          <p>Open and edit <code>start/pages/index.lw</code> to customize this page.</p>
         </div>
       </div>
-    </section>
-
-    <section class="install-section">
-      <div class="container">
-        <div class="terminal-loader">
-          <div class="terminal-info">
-            <div class="t-dots"><span></span><span></span><span></span></div>
-            <span class="t-title">Bash — Quick Initialization</span>
-          </div>
-          <div class="terminal-content">
-            <span class="command-text">npm create letswhim@latest</span>
-          </div>
-          <button class="copy-btn" onclick="navigator.clipboard.writeText('npm create letswhim@latest')" title="Copy to clipboard">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="features-section">
-      <div class="container">
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polyline>
-              </svg>
-            </div>
-            <h3>Ultralight Core</h3>
-            <p>A minimalist runtime executing purely on the client-side, effectively eliminating server-induced latency.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-              </svg>
-            </div>
-            <h3>Native P2P Engine</h3>
-            <p>Real-time collaboration without database middleware. Direct browser-to-browser connectivity via WebRTC.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
-            <h3>L-Lang Syntax</h3>
-            <p>Clean and intuitive code abstraction designed to accelerate developer workflows and minimize cognitive overhead.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact-section">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-content">
-            <h2>Let's Build the Future Together</h2>
-            <p>
-              Interested in collaboration, reporting a bug, or just want to say hi? 
-              Our transmission lines are always open.
-            </p>
-          </div>
-          <div class="contact-actions">
-            <a href="mailto:rifky@keemail.me" class="btn-email">
-              Reach out via Email
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
-
   <Footer />
 
   <style>
-    .landing-page { background: var(--bg); color: var(--text); }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-    /* HERO SECTION */
-    .hero-section { padding: 160px 0 60px; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-    .engine-badge { display: inline-block; padding: 6px 12px; background: rgba(55, 147, 255, 0.1); color: var(--accent); border-radius: 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; }
-    h1 { font-size: 64px; font-weight: 900; line-height: 1.1; margin: 0 0 24px; letter-spacing: -2px; }
-    .text-gradient { color: var(--accent); }
-    p { font-size: 18px; line-height: 1.6; opacity: 0.6; margin-bottom: 40px; }
-    .hero-btns { display: flex; gap: 16px; }
-    .btn-primary { background: var(--text); color: var(--bg); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
-    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); padding: 14px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: 0.2s; }
-    .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
-
-    /* INSTALL SECTION */
-    .install-section { padding: 40px 0; display: flex; justify-content: center; }
-    .terminal-loader { background: #0d0d0f; border: 1px solid var(--border); border-radius: 12px; width: 100%; max-width: 480px; display: flex; align-items: center; justify-content: space-between; padding: 16px 24px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
-    .terminal-info { display: flex; align-items: center; gap: 12px; position: absolute; top: -32px; left: 10px; }
-    .t-dots { display: flex; gap: 6px; }
-    .t-dots span { width: 6px; height: 6px; border-radius: 50%; background: var(--border); opacity: 0.5; }
-    .t-title { font-size: 10px; font-family: monospace; opacity: 0.4; text-transform: uppercase; letter-spacing: 1px; }
-    .terminal-content { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #fff; }
-    .command-text { color: var(--accent); font-weight: 500; }
-    .copy-btn { background: transparent; border: none; color: #fff; opacity: 0.4; cursor: pointer; transition: 0.2s; padding: 8px; }
-    .copy-btn:hover { opacity: 1; color: var(--accent); }
-
-    /* CODE WINDOW */
-    .code-window { background: #0a0a0b; border-radius: 12px; border: 1px solid #222; box-shadow: 0 30px 60px rgba(0,0,0,0.3); overflow: hidden; }
-    .window-header { background: #1a1a1c; padding: 12px 16px; display: flex; align-items: center; gap: 16px; border-bottom: 1px solid #222; }
-    .window-controls { display: flex; gap: 8px; }
-    .window-controls span { width: 10px; height: 10px; border-radius: 50%; }
-    .dot-red { background: #ff5f56; } .dot-yellow { background: #ffbd2e; } .dot-green { background: #27c93f; }
-    .window-title { font-size: 12px; color: #666; font-family: monospace; }
-    .window-content { padding: 30px; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6; color: #d4d4d4; }
-    .token-keyword { color: #569cd6; } .token-string { color: #ce9178; } .token-comment { color: #6a9955; }
-
-    /* FEATURES */
-    .features-section { padding: 100px 0; border-top: 1px solid var(--border); }
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    .feature-card { padding: 40px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; transition: 0.3s; }
-    .feature-card:hover { transform: translateY(-5px); border-color: var(--accent); }
-    .feature-icon { color: var(--accent); margin-bottom: 24px; }
-    .feature-card h3 { margin: 0 0 16px; font-size: 20px; font-weight: 700; }
-    .feature-card p { font-size: 14px; opacity: 0.6; line-height: 1.6; margin: 0; }
-
-    /* --- FIXED CONTACT SECTION CSS --- */
-    .contact-section { padding: 100px 0; border-top: 1px solid var(--border); }
-    .contact-card { 
-      background: var(--surface); 
-      border: 1px solid var(--border); 
-      padding: 60px; 
-      border-radius: 24px; 
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      gap: 40px; 
+    .starter-main { 
+      background: var(--bg); color: var(--text); min-height: 100vh;
+      display: flex; align-items: center; justify-content: center; padding: 0 24px;
     }
-    .contact-content h2 { font-size: 36px; font-weight: 800; margin-bottom: 16px; }
-    .contact-content p { font-size: 16px; max-width: 500px; margin-bottom: 0; opacity: 0.6; }
-    .btn-email { 
-      background: var(--accent); 
-      color: #000; 
-      padding: 16px 32px; 
-      border-radius: 12px; 
-      text-decoration: none; 
-      font-weight: 700; 
-      transition: 0.3s;
-      white-space: nowrap;
+    .hero-layout { 
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; 
+      max-width: 1000px; width: 100%; align-items: center;
     }
-    .btn-email:hover { transform: scale(1.05); filter: brightness(1.1); }
+    .badge-mini { 
+      color: var(--accent); font-size: 11px; font-weight: 900; 
+      letter-spacing: 1px; margin-bottom: 16px; 
+    }
+    h1 { font-size: 84px; font-weight: 900; line-height: 0.95; margin: 0; letter-spacing: -4px; }
+    .text-accent { color: var(--accent); }
+    .hero-info { max-width: 400px; }
+    .hero-info p { font-size: 18px; opacity: 0.6; line-height: 1.6; margin-bottom: 32px; }
+    .step-box { 
+      background: var(--surface); border: 1px solid var(--border); 
+      padding: 30px; border-radius: 20px; 
+    }
+    .step-box h3 { margin: 0 0 12px; font-size: 18px; }
+    .step-box p { font-size: 14px; margin: 0; opacity: 0.8; }
+    code { color: var(--accent); background: rgba(55, 147, 255, 0.1); padding: 2px 6px; border-radius: 4px; }
 
-    /* MOBILE RESPONSIVE FIX */
     @media (max-width: 968px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 40px; }
-      .hero-btns { justify-content: center; }
-      h1 { font-size: 42px; }
-      .code-window { max-width: 500px; margin: 0 auto; }
-      .features-grid { grid-template-columns: 1fr; }
-      .contact-card { flex-direction: column; text-align: center; padding: 40px 24px; }
-      .contact-content p { margin: 0 auto 30px; }
+      .hero-layout { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
+      h1 { font-size: 64px; }
+      .hero-info { margin: 0 auto; }
     }
   </style>
 </template>

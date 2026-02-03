@@ -1,31 +1,15 @@
 {
-  "name": "letswhim-project",
-  "version": "1.0.0",
-  "description": "A Human-Readable Static Site Generator with Terminal UI Interface.",
+  "name": "letswhim-starter",
+  "version": "2.0.1",
+  "description": "The official ultralight starter kit for LetsWhim Engine.",
   "type": "module",
-  
   "scripts": {
     "build": "node lw.js",
-    "dev": "node lw.js --watch & npx serve dist -l 2001"
+    "dev": "node lw.js && npx serve dist"
   },
-
-  "keywords": [
-    "ssg",
-    "static-site-generator",
-    "framework",
-    "terminal-ui",
-    "portfolio",
-    "digital-pr",
-    "human-readable",
-    "letswhim",
-    "cli",
-    "nodejs"
-  ],
-
   "author": "Rifky <rifky@keemail.me>",
-  "license": "ISC",
-  
-  "devDependencies": {
+  "license": "MIT",
+  "dependencies": {
     "serve": "^14.2.4"
   }
 }

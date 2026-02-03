@@ -1,22 +1,8 @@
-# --- Dependencies ---
 node_modules/
-
-# --- Build Output ---
 dist/
-
-# --- Environment Variables (PENTING BIAR RAHASIA AMAN) ---
 .env
-.env.local
-
-# --- OS Junk Files ---
+.env.*.local
 .DS_Store
-Thumbs.db
-
-# --- Logs (Sampah Error NPM) ---
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# --- Google Verification ---
 google*.html
-public/google*.html
+sitemap.xml
+npm-debug.log*
