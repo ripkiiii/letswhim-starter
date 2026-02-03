@@ -1,7 +1,0 @@
-<template>
-  <button onclick="toggleTheme()" class="glass w-10 h-10 rounded-full flex items-center justify-center hover:bg-[var(--text)] hover:text-[var(--bg)] transition duration-300 cursor-pointer">
-    <i data-lucide="sun" class="w-5 h-5 icon-sun"></i>
-    
-    <i data-lucide="moon" class="w-5 h-5 icon-moon"></i>
-  </button>
-</template>

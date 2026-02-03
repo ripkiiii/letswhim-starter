@@ -1,0 +1,43 @@
+<logic>
+  atur title = "About - letswhim";
+  
+  // --- NAVIGASI ---
+  perintah "home" -> "<a href='/' class='font-bold text-emerald-500 hover:underline'>Return to Root</a>";
+  perintah "back" -> "<a href='/' class='font-bold text-emerald-500 hover:underline'>Return to Root</a>";
+  perintah "contact" -> "<a href='/contact' class='text-purple-500 underline'>Go to Contact</a>";
+  
+  perintah "help" -> "<div class='text-sm text-gray-500'>Available: <span class='text-gray-900 dark:text-white font-medium'>home, back, contact, clear</span></div>";
+</logic>
+
+<template>
+  <div class="mb-8 border-b border-gray-200 dark:border-gray-800 pb-4 flex justify-between items-center">
+    <div class="flex items-center gap-2 text-gray-400 text-sm">
+        <a href="/" class="hover:text-gray-900 dark:hover:text-white transition">root</a>
+        <span>/</span>
+        <span class="text-gray-900 dark:text-white font-medium">about</span>
+    </div>
+    <a href="/" class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-white/5 transition">esc</a>
+  </div>
+
+  <div class="max-w-2xl">
+    <h1 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">The Manifesto</h1>
+    
+    <div class="prose prose-gray dark:prose-invert leading-relaxed text-gray-600 dark:text-gray-300">
+        <p>
+            In a world where designers and engineers often speak different languages, I position myself as the translator.
+        </p>
+        <p>
+            I am a <strong>Digital Public Relations</strong> student who refuses to choose between creativity and logic. 
+            <strong>LetsWhim</strong> is my proof that code can be a form of eloquent communication, not just a set of instructions.
+        </p>
+    </div>
+
+    <div class="mt-10 p-6 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 flex items-center gap-5">
+        <img src="https://github.com/ripkiiii.png" class="w-14 h-14 rounded-full grayscale hover:grayscale-0 transition shadow-sm">
+        <div>
+            <h3 class="font-bold text-gray-900 dark:text-white">Rifky</h3>
+            <p class="text-sm text-gray-500">Founder & Lead Engineer</p>
+        </div>
+    </div>
+  </div>
+</template>

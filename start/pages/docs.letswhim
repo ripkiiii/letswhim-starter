@@ -1,0 +1,39 @@
+<logic>
+  atur title = "Docs - letswhim";
+  
+  // --- NAVIGATION FIX ---
+  perintah "home" -> "<a href='/' class='font-bold text-emerald-500 hover:underline'>Return to Root</a>";
+  perintah "back" -> "<a href='/' class='font-bold text-emerald-500 hover:underline'>Return to Root</a>";
+  
+  perintah "help" -> "<div class='text-sm text-gray-500'>Available: <span class='text-gray-900 dark:text-white font-medium'>home, back, clear</span></div>";
+</logic>
+
+<template>
+  <div class="mb-8 border-b border-gray-200 dark:border-gray-800 pb-4 flex justify-between items-center">
+    <div class="flex items-center gap-2 text-gray-400 text-sm">
+        <a href="/" class="hover:text-gray-900 dark:hover:text-white transition">root</a>
+        <span>/</span>
+        <span class="text-gray-900 dark:text-white font-medium">docs</span>
+    </div>
+    <a href="/" class="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-white/5 transition">esc</a>
+  </div>
+
+  <div class="prose prose-sm dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
+      <h3 class="text-gray-900 dark:text-white font-bold text-lg mb-4">Installation</h3>
+      <div class="bg-gray-100 dark:bg-black/40 p-4 rounded-lg border border-gray-200 dark:border-white/5 font-mono text-sm mb-8">
+          npm create letswhim@latest
+      </div>
+
+      <h3 class="text-gray-900 dark:text-white font-bold text-lg mb-4">Core Concepts</h3>
+      <ul class="space-y-2 list-none pl-0">
+          <li class="flex gap-3">
+              <span class="text-emerald-500 font-bold">Logic:</span>
+              <span>Where variables, data fetching, and commands live.</span>
+          </li>
+          <li class="flex gap-3">
+              <span class="text-blue-500 font-bold">Template:</span>
+              <span>Standard HTML with handlebars syntax <code>{{ variable }}</code>.</span>
+          </li>
+      </ul>
+  </div>
+</template>

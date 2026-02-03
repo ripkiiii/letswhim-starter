@@ -1,0 +1,74 @@
+<logic>
+  atur title = "letswhim - Framework";
+  atur layout = "terminal";
+  atur desc = "LetsWhim is a Human-Readable Static Site Generator (SSG) with a Terminal UI interface. Built on Node.js for Digital PR & Developers to build hacker-style portfolios instantly.";
+  
+  // --- CORE COPYWRITING ---
+  perintah "install" -> "<span class='text-yellow-500 font-mono'>npm create letswhim@latest</span><br><span class='text-gray-400 text-xs mt-1'>Initializing core modules... System ready.</span>";
+  
+  perintah "features" -> "<span class='font-bold text-gray-900 dark:text-white'>Engine Capabilities:</span><ul class='list-disc pl-5 mt-2 space-y-1 text-gray-600 dark:text-gray-300'><li><b>Zero Config:</b> Native Node.js architecture.</li><li><b>Bilingual Logic:</b> Write in ID or EN.</li><li><b>SEO Automated:</b> Smart meta-tag injection.</li></ul>";
+  
+  perintah "founder" -> "Architected by <a href='/about' class='text-blue-500 font-medium hover:underline'>Rifky</a> (Digital PR & Engineer).";
+
+  // --- NAVIGATION ---
+  perintah "docs" -> "Opening Manual... <a href='/docs' class='text-emerald-500 font-bold hover:underline'>/docs/manual</a>";
+  perintah "about" -> "Opening Profile... <a href='/about' class='text-blue-500 font-bold hover:underline'>/sys/about</a>";
+  perintah "contact" -> "Opening Channel... <a href='/contact' class='text-purple-500 font-bold hover:underline'>/sys/contact</a>";
+  perintah "examples" -> "Loading Demos... <a href='/examples' class='text-yellow-500 font-bold hover:underline'>/sys/examples</a>";
+  
+  // Redundant fix
+  perintah "home" -> "You are already at root.";
+  perintah "back" -> "You are at the start.";
+
+  // --- HELP MENU ---
+  perintah "help" -> "<div class='text-sm space-y-3'><div class='text-gray-400 border-b border-gray-200 dark:border-gray-700 pb-1 mb-2 font-medium uppercase tracking-wide'>Main Navigation</div><div class='grid grid-cols-[100px_1fr] gap-x-4 gap-y-2'><span class='text-emerald-500 font-medium'>install</span><span class='text-gray-500'>Start new project</span><span class='text-blue-500 font-medium'>docs</span><span class='text-gray-500'>Read the manual</span><span class='text-purple-500 font-medium'>contact</span><span class='text-gray-500'>Work with Rifky</span><span class='text-yellow-500 font-medium'>examples</span><span class='text-gray-500'>Code demos</span><span class='text-gray-500 font-medium'>about</span><span class='text-gray-500'>Philosophy</span><span class='text-gray-400'>clear</span><span class='text-gray-500'>Clean screen</span></div></div>";
+</logic>
+
+<template>
+  <div class="flex flex-col items-center justify-center text-center py-16 fade-in">
+     <img src="/favicon.svg" class="w-20 h-20 mb-8 hover:scale-105 transition duration-300 drop-shadow-xl">
+
+     <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">
+        LetsWhim<span class="text-emerald-500">.</span>
+     </h1>
+     
+     <p class="text-lg text-gray-500 dark:text-gray-400 max-w-lg leading-relaxed mb-10 font-sans">
+       The Static Site Generator that speaks your language. 
+       <span class="text-gray-800 dark:text-gray-200 font-medium">Simple. Logical. Human.</span>
+     </p>
+
+     <div class="flex flex-wrap justify-center gap-3 text-sm font-medium">
+        <div class="px-5 py-2.5 rounded-lg bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/5 text-gray-600 dark:text-gray-300 select-all font-mono">
+            npm create letswhim
+        </div>
+        <a href="/docs" class="px-5 py-2.5 rounded-lg bg-emerald-600 text-white hover:bg-emerald-500 transition shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+            Read Docs 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd" /></svg>
+        </a>
+     </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 border-t border-gray-100 dark:border-gray-800 pt-10 text-left">
+      <div class="group">
+          <div class="mb-3 text-blue-500 bg-blue-50 dark:bg-blue-500/10 w-fit p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-1">Blazing Fast</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Native Node.js engine. Zero bloat.</p>
+      </div>
+      <div class="group">
+          <div class="mb-3 text-emerald-500 bg-emerald-50 dark:bg-emerald-500/10 w-fit p-2 rounded-lg">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-1">Human Syntax</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Readable logic. Bridging PR & Code.</p>
+      </div>
+      <div class="group">
+          <div class="mb-3 text-purple-500 bg-purple-50 dark:bg-purple-500/10 w-fit p-2 rounded-lg">
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" /></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 dark:text-white mb-1">SEO Automated</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Meta tags auto-injected.</p>
+      </div>
+  </div>
+</template>

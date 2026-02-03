@@ -1,13 +1,31 @@
 {
   "name": "letswhim-project",
-  "version": "2.9.0",
+  "version": "1.0.0",
+  "description": "A Human-Readable Static Site Generator with Terminal UI Interface.",
   "type": "module",
+  
   "scripts": {
-    "dev": "node lw.js dev",
-    "build": "node lw.js build"
+    "build": "node lw.js",
+    "dev": "node lw.js --watch & npx serve dist -l 2001"
   },
-  "dependencies": {
-    "hono": "^4.0.0",
-    "@hono/node-server": "^1.0.0"
+
+  "keywords": [
+    "ssg",
+    "static-site-generator",
+    "framework",
+    "terminal-ui",
+    "portfolio",
+    "digital-pr",
+    "human-readable",
+    "letswhim",
+    "cli",
+    "nodejs"
+  ],
+
+  "author": "Rifky <rifky@keemail.me>",
+  "license": "ISC",
+  
+  "devDependencies": {
+    "serve": "^14.2.4"
   }
 }
